@@ -3,7 +3,7 @@ import CommentDetail from './CommentDetail'
 
 const CommentList = ({ comments }) => {
 
-    if (comments === null) {
+    if (comments.length === 0) {
         return <p>No comments</p>
     }
 

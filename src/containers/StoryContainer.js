@@ -49,7 +49,10 @@ class StoryContainer extends Component {
     }
 
 
+
     render() {
+
+        const commentList = this.state.comments ? <CommentList comments={this.state.comments} /> : null
         return (
             <div className='story-container'>
                 <h1>Hacker News</h1>
@@ -58,7 +61,7 @@ class StoryContainer extends Component {
                     onStorySelected={this.selectStory}
                 />
                 <StoryDetail story={this.state.selectedStory} />
-                <CommentList comments={this.state.comments} />
+                {commentList}
             </div>
         )
     }
