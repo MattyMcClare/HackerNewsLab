@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
+import StoryContainer from './containers/StoryContainer';
 
 function App() {
   return (
-    <h1>Banana</h1>
+    <StoryContainer />
   );
 }
 
