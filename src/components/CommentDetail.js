@@ -1,12 +1,28 @@
 import React from 'react';
+import CommentList from './CommentList';
 
-const CommentDetail = ({ text, by }) => {
-    return (
-        <div>
-            <h4>{by}</h4>
-            <p>{text}</p>
-        </div>
-    )
+
+class CommentDetail extends React.Component {
+
+    render() {
+        const { comments, by, text } = this.props
+        if (!comments) {
+            return (
+                <div>
+                    <h4>{by}</h4>
+                    <p>{text}</p>
+                </div>
+            )
+        }
+        return (
+            <div>
+                <h4>{by}</h4>
+                <p>{text}</p>
+                <CommentList comments={comments} />
+            </div>
+        )
+    }
+
 }
 
 export default CommentDetail;
