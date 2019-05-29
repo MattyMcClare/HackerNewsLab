@@ -9,8 +9,7 @@ class StoryContainer extends Component {
         this.state = {
             stories: [],
             selectedStory: null
-        }
-
+        };
         this.selectStory = this.selectStory.bind(this);
     }
 

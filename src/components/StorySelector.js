@@ -4,7 +4,9 @@ const StorySelector = (props) => {
 
     const options = props.stories.map((story, index) => {
         return (
-            <option value={index} key={index}>
+            <option
+                value={index}
+                key={index}>
                 {story}
             </option>);
     })
@@ -15,10 +17,11 @@ const StorySelector = (props) => {
     }
 
     return (
-        <select>
+        <select
             onChange={handleSelectChange}
+            defaultValue="default">
             <option
-                defaultValue="default">
+                disabled value="default">
                 select a story...
             </option>
             {options}
