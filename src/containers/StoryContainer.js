@@ -33,22 +33,30 @@ class StoryContainer extends Component {
 
     }
 
+
+
     selectStory(selectedIndex) {
+
         const selectedStory = this.state.stories[selectedIndex];
         this.setState({ selectedStory })
-        const comments = selectedStory.kids
-        const promises = comments.map((id) => {
-            return fetch(`http://hacker-news.firebaseio.com/v0/item/${id}.json`)
-                .then(res => res.json())
-        });
-        Promise.all(promises)
-            .then(commentObjects => {
-                this.setState({ comments: commentObjects })
-            })
 
+        const commentSelection = (selectedIndex) => {
+            const comments = this.state.stories[selectedIndex].kids
+            const promises = comments.map((id) => {
+                return fetch(`http://hacker-news.firebaseio.com/v0/item/${id}.json`)
+                    .then(res => res.json())
+            });
+            Promise.all(promises)
+                .then(commentObjects => {
+                    this.setState({ comments: commentObjects })
+                })
+            if (promises[0].kids.length > 0) {
+                commentSelection(selectedIndex)
+            }
+
+        }
+        commentSelection(selectedIndex)
     }
-
-
 
     render() {
 
