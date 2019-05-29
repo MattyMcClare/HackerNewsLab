@@ -44,7 +44,6 @@ class CommentList extends React.Component {
         })
         return (
             <div className="comment-list">
-                <h3>Comments</h3>
                 {commentsItems}
             </div>
         )

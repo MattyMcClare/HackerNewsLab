@@ -1,0 +1,120 @@
+/* Variables */
+
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+    
+}
+
+body {
+    background: #ccc;
+    margin: 30px 50px;
+    line-height: 1.4;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+}
+
+/* Header */
+
+.story-container {
+    display: grid;
+    grid-gap: 20px;
+    text-align: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    background: var(--primary);
+}
+
+.story-container select {
+    margin: 20px 0;
+    font-size: 1rem;
+    outline: none;
+}
+
+.story-container h1 {
+    margin: 20px 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.before {
+    text-align: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+/* Story Detail */
+
+.story-detail {
+    display: grid;
+    grid-gap: 20px;
+    justify-content: center;
+    text-align: center;
+    box-shadow: var(--shadow);
+    background: var(--primary);
+}
+
+.story-detail h3 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.story-detail p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.story-detail a {
+    background: var(--dark);
+    color: var(--light);
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+    border: 0;
+    margin-bottom: 20px;
+}
+
+/* Comments */
+
+.comment-container {
+    display: grid;
+    grid-gap: 20px;
+    box-shadow: var(--shadow);
+    background: var(--primary);
+}
+
+.comment-list {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.comment-list div {
+    margin-left: 10px;
+}
+
+.comment-list h4 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-top: 20px;
+}
+
+.comment-list p {
+    font-size: 0.9rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
