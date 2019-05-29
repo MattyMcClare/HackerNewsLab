@@ -10,6 +10,8 @@ class StoryContainer extends Component {
             stories: [],
             selectedStory: null
         }
+
+        this.selectStory = this.selectStory.bind(this);
     }
 
     componentDidMount() {
@@ -21,13 +23,21 @@ class StoryContainer extends Component {
             })
     }
 
+    selectStory(selectedIndex) {
+        const selectedStory = this.state.stories[selectedIndex];
+        this.setState({ selectedStory })
+    }
+
 
     render() {
         return (
             <div className='story-container'>
                 <h1>Hacker News</h1>
                 <StoryDetail />
-                <StorySelector />
+                <StorySelector
+                    stories={this.state.stories}
+                    onStorySelected={this.selectStory}
+                />
             </div>
         )
     }
