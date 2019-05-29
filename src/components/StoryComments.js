@@ -1,7 +1,7 @@
 import React from 'react';
 
 const StoryComments = () => {
-    return <h1>im StoryComments</h1>
+    return null;
 }
 
 export default StoryComments;
