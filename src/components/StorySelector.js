@@ -7,7 +7,7 @@ const StorySelector = (props) => {
             <option
                 value={index}
                 key={index}>
-                {story}
+                {story.title}
             </option>);
     })
 
