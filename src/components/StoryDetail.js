@@ -1,8 +1,8 @@
 import React from 'react';
-import StoryComments from './StoryComments';
+import CommentList from './CommentList';
 
-const StoryDetail = ({ story }) => {
-
+const StoryDetail = (props) => {
+    const { story } = props
     if (story === null) {
         return <p>Select a story for more details...</p>
     }
@@ -16,7 +16,7 @@ const StoryDetail = ({ story }) => {
             <h3>Title: {story.title}</h3>
             <p>By: {story.by}</p>
             {storyLink}
-            <StoryComments />
+            <CommentList comments={story.kids} />
         </div>
     )
 }
